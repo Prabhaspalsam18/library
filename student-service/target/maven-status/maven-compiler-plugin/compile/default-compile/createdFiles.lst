@@ -1,0 +1,15 @@
+org\example\model\Student.class
+org\example\controller\StudentController.class
+org\example\repository\StudentRepository.class
+org\example\StudentApplication.class
+org\example\dto\response\GenericResponse.class
+org\example\dto\response\GenericResponse$GenericResponseBuilder.class
+org\example\util\Constants.class
+org\example\model\StudentDetails$StudentDetailsBuilder.class
+org\example\dto\request\StudentRequest.class
+org\example\dto\response\StudentResponse$StudentResponseBuilder.class
+org\example\model\Student$StudentBuilder.class
+org\example\service\StudentService.class
+org\example\model\StudentDetails.class
+org\example\dto\request\StudentRequest$StudentRequestBuilder.class
+org\example\dto\response\StudentResponse.class

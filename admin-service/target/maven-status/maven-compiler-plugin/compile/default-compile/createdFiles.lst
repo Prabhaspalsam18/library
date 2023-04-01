@@ -1,0 +1,15 @@
+org\example\dto\response\BookResponse.class
+org\example\BookServiceApplication.class
+org\example\dto\response\BookResponse$BookResponseBuilder.class
+org\example\dto\response\GenericResponse.class
+org\example\model\Book$BookBuilder.class
+org\example\controller\BookController.class
+org\example\dto\response\GenericResponse$GenericResponseBuilder.class
+org\example\util\Constants.class
+org\example\repository\BookRepository.class
+org\example\model\BookDetails$BookDetailsBuilder.class
+org\example\model\BookDetails.class
+org\example\dto\request\BookRequest$BookRequestBuilder.class
+org\example\dto\request\BookRequest.class
+org\example\service\BookService.class
+org\example\model\Book.class

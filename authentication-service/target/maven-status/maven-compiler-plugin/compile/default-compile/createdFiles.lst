@@ -1,0 +1,13 @@
+org\example\model\User.class
+org\example\model\User$UserBuilder.class
+org\example\dto\response\UserResponse$UserResponseBuilder.class
+org\example\dto\response\GenericResponse.class
+org\example\controller\UserController.class
+org\example\dto\request\UserRequest$UserRequestBuilder.class
+org\example\dto\response\GenericResponse$GenericResponseBuilder.class
+org\example\repository\UserRepository.class
+org\example\util\Constants.class
+org\example\dto\request\UserRequest.class
+org\example\dto\response\UserResponse.class
+org\example\service\UserService.class
+org\example\UserApplication.class

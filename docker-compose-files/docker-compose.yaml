@@ -1,0 +1,60 @@
+version: "3.9"
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+
+  student_service:
+    image: student-service:latest
+    container_name: student-service
+    restart: unless-stopped
+    ports:
+      - "8082:8082"
+
+  authentication_service:
+    image: authentication-service:latest
+    container_name: authentication-service
+    restart: unless-stopped
+    ports:
+      - "8083:8083"
+
+  admin_service:
+    image: admin-service:latest
+    container_name: admin-service
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  prometheus:
+    image: prom/prometheus:v2.38.0
+    container_name: prometheus-container
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yaml'
+    ports:
+      - "9090:9090"
+    restart: always
+
+  grafana:
+    image: grafana/grafana-oss:9.1.4
+    container_name: grafana-container
+    depends_on:
+      - prometheus
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SERVER_DOMAIN=localhost
