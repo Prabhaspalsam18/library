@@ -53,7 +53,7 @@ public class BookService {
         if (book.isPresent()) {
             Book updatedBook = Book.builder()
                             .book_id(bookRequest.getBook_id())
-                                    .book_details(bookRequest.getBook_details()).build();
+                            .book_details(bookRequest.getBook_details()).build();
             bookRepository.save(updatedBook);
 
             return new GenericResponse(Constants.SUCCESS, "Book updated successfully");
